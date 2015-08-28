@@ -3,3 +3,4 @@
 node_modules/
 app/scripts/vendor
 bower_components
+*.log
