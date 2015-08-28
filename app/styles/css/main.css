@@ -455,8 +455,7 @@ body {
 a {
   text-decoration: none;
   color: #404040;
-  -webkit-transition: all 100ms ease-in-out;
-          transition: all 100ms ease-in-out; }
+  transition: all 100ms ease-in-out; }
   a:hover {
     text-decoration: underline; }
 
@@ -506,8 +505,7 @@ ul {
   .data--list .item {
     height: 60px;
     line-height: 40px;
-    -webkit-transition: background 100ms ease-in-out;
-            transition: background 100ms ease-in-out; }
+    transition: background 100ms ease-in-out; }
     .data--list .item:hover {
       background: #404040; }
     .data--list .item .champ-image {
@@ -546,13 +544,8 @@ ul {
    Components
    ========================================================================== */
 .champion-block {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: flex wrap;
-      -ms-flex-flow: flex wrap;
-          flex-flow: flex wrap; }
+  flex-flow: flex wrap; }
 
 .displaymode-menu a {
   opacity: 0.6; }

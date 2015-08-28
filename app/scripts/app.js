@@ -26,6 +26,12 @@ var ritoApp = angular.module('rito.app', [
           controller: 'ChampionController',
           controllerAs: 'CC'
         })
+        .state('matchHistory', {
+          url: '/match-history/{summonerId}',
+          templateUrl: 'partials/matchHistoryPageTpl.html',
+          controller: 'MatchHistoryController',
+          controllerAs: 'MHC'
+        })
 }])
 .run(['$state', '$rootScope',
   function ($state, $rootScope) {
