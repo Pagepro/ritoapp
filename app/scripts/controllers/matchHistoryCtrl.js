@@ -5,12 +5,18 @@ ritoApp.controller('MatchHistoryController', [
   function ($scope, $stateParams, MatchHistoryService) {
 
     $scope.matchHistoryData = null;
+    $scope.summonerIdInput = '';
+    var summonerId = $stateParams.summonerId;
     $scope.getMatchHistoryData = function MHC_getMatchHistoryData () {
-      var summonerId = $stateParams.summonerId;
 
       $scope.matchHistoryData = MatchHistoryService.getMatchHistory($stateParams.summonerId);
 
     }
-    $scope.getMatchHistoryData();
+    // TODO change gathering ID from stateParams to controller's model
+    if (summonerId) {
+      $scope.getMatchHistoryData();
+    } else {
+      console.log('no ID');
+    }
   }
 ]);

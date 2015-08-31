@@ -13,8 +13,8 @@ ritoApp.factory('MatchHistoryFactory', [
       .success(function (data) {
         return data;
       })
-      .error(function (data) {
-        alert('nie dziala :(');
+      .error(function (data, status) {
+        console.error(status);
       });
     }
     return {
