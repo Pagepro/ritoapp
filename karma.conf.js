@@ -24,7 +24,7 @@ module.exports = function(config) {
         'app/scripts/factories/*.js',
         'app/scripts/directives/*.js',
         'index.html',
-        'spec/*.js'
+        'spec/unit/*.js'
     ],
 
 
