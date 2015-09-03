@@ -1,3 +1,5 @@
+// run tests by `karma start`
+
 // Karma configuration
 // Generated on Thu Sep 03 2015 12:08:39 GMT+0200 (CEST)
 
