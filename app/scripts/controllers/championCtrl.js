@@ -13,6 +13,7 @@ ritoApp.controller('ChampionController', [
     $scope.showContent = false;
     $scope.champion_id = $stateParams.championId;
     $scope.champion = {};
+    $scope.testItIdiot = "Test this shit."
 
     $scope.getChampionDetails = function CC_getChampionDetails (champion_id) {
       //TODO check if integer

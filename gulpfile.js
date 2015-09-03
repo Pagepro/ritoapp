@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var jasmine = require('gulp-jasmine');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
@@ -11,6 +12,16 @@ gulp.task('serve', ['sass'], function() {
   gulp.watch("app/styles/sass/**/*.scss", ['sass']);
   gulp.watch("app/partials/**/*.html").on('change', browserSync.reload);
 });
+
+// Run tests for application
+/**** WARNING ****/
+// this task is replaced by `karma start`. Leaving it here in case of future changes
+gulp.task('test', [], function () {
+  return gulp.src('spec/test.js')
+          .pipe(jasmine({
+            verbose: true // display ALL test names even if they are passed
+          }));
+})
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
