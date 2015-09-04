@@ -14,6 +14,10 @@ ritoApp.service('EnvironmentService', [
             console.info('not found');
             // $state.go('homeState');
         }
+        if (status === 0) {
+            $state.go('homeState')
+            alert('Connection problem.')
+        }
     }
 
 }]);

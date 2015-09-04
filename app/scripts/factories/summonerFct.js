@@ -1,16 +1,16 @@
 'use strict';
 
-ritoApp.factory('MatchHistoryFactory', [
+ritoApp.factory('SummonerFactory', [
   '$http',
   '$q',
   'EnvironmentService',
   function ($http, $q, Env) {
 
-    var getMatchHistory = function MHF_getMatchHistory (summonerId) {
+    var getSummonerByName = function SF_getSummonerByName (summonerName) {
       var deferred = $q.defer();
       $http({
         method: 'get',
-        url: Env.domainName + '/' + Env.serverLocalisation + '/v2.2/matchhistory/' + summonerId + '?api_key=' + Env.apiKey
+        url: Env.domainName + '/' + Env.serverLocalisation + '/v1.4/summoner/by-name/' + summonerName + '?api_key=' + Env.apiKey
       })
       .success(function (data) {
         deferred.resolve(data);
@@ -24,7 +24,7 @@ ritoApp.factory('MatchHistoryFactory', [
     }
 
     return {
-      getMatchHistory: getMatchHistory
+      getSummonerByName: getSummonerByName
     }
   }
 ]);

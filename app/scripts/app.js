@@ -35,7 +35,7 @@ var ritoApp = angular.module('ritoApp', [
           controllerAs: 'CC'
         })
         .state('matchHistory', {
-          url: '/match-history/{summonerId}',
+          url: '/match-history',
           templateUrl: 'partials/matchHistoryPageTpl.html',
           controller: 'MatchHistoryController',
           controllerAs: 'MHC'
